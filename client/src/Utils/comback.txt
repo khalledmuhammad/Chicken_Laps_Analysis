@@ -1,0 +1,6 @@
+ {/*   <a rel="noreferrer" href="https://www.linkedin.com/in/khaled-mohamed-398619182/" target="_blank"  >  <img alt="socialmediaIcon" src="https://img.icons8.com/color/30/000000/linkedin.png"/>     </a>  
+             <a  rel="noreferrer" href="https://www.facebook.com/khaled.muhammad.35574" target="_blank" > <img alt="socialmediaIcon" src="https://img.icons8.com/color/30/000000/facebook-new.png"/></a>  
+             <a rel="noreferrer" href="https://github.com/khalledmuhammad" target="_blank" > <img alt="socialmediaIcon" src="https://img.icons8.com/ios-glyphs/30/000000/github.png"/>    </a>   
+             <a rel="noreferrer" href="https://www.instagram.com/khaaledmohamad/" target="_blank" > <img alt="socialmediaIcon" src="https://img.icons8.com/fluency/30/000000/instagram-new.png"/></a>  
+             <a rel="noreferrer" href="https://twitter.com/KhaledM50926178" target="_blank" > <img alt="socialmediaIcon" src="https://img.icons8.com/color/30/000000/twitter--v1.png"/></a>  
+            */}   
