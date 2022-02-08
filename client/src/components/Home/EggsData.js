@@ -2,7 +2,6 @@ import React , {useEffect} from 'react';
 import { useParams} from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { AppActions, GetEggData } from '../../store/AppStore';
-import Moment from "react-moment";
 
 
 function EggsData() {
@@ -25,20 +24,16 @@ const params = useParams()
    
     <table className="table table-striped table-bordered">  
     
-      {
-        EggData ? 
-        EggData.map(Data=>(
-          <>
                       <thead class="thead-dark"> 
 
           <tr>  
-                      <th>Created At</th>  
                       <th> production_date</th> 
                        <th>age </th>
                        <th>farm </th>
                        <th>flock </th>
                        <th> line </th>
                        <th>house </th>
+                       <th>nest_egg </th>
                        <th>floor_egg </th>
                        <th>dirty </th>
                        <th>small  </th>
@@ -46,7 +41,6 @@ const params = useParams()
                        <th>misshape</th>
                        <th>white </th>
                        <th>broken </th>
-                       <th>nest_egg </th>
                       
 
               
@@ -54,11 +48,12 @@ const params = useParams()
           
           </tr>  
           </thead>
-        <tr>
-          <td key={Data._id}>
-                    <Moment to={Data.createdAt}></Moment>
-  
-                    </td>
+      {
+        EggData ? 
+        EggData.map(Data=>(
+          <>
+        <tr  key={Data._id}>
+         
                  
                    {
                    Object.values(Data.Data).map(vals=>{
@@ -71,6 +66,7 @@ const params = useParams()
                        <td> {vals.flock}</td>
                        <td> {vals.line}</td>
                        <td> {vals.house}</td>
+                       <td> {vals.nest_egg}</td>
                        <td> {vals.floor_egg}</td>
                        <td> {vals.dirty}</td>
                        <td> {vals.small}</td>
@@ -78,7 +74,6 @@ const params = useParams()
                        <td> {vals.misshape}</td>
                        <td> {vals.white}</td>
                        <td>{vals.broken}</td>
-                       <td> {vals.nest_egg}</td>
                      
 
 

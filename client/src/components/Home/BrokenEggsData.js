@@ -3,7 +3,6 @@ import React , {useEffect} from 'react';
 import { useParams} from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { AppActions, GetBroken } from '../../store/AppStore';
-import Moment from "react-moment";
 
 
 
@@ -25,13 +24,8 @@ function BrokenEggsData() {
    
     <table className="table table-striped table-bordered">  
     
-      {
-        BrokenData ? 
-        BrokenData.map(Data=>(
-          <>
             <thead class="thead-dark"> 
           <tr>  
-              <th>Created At</th>  
               <th>رقم الدفعه</th> 
               <th>تاريخ__الايداع</th>
                        <th>مزرعه </th>
@@ -62,11 +56,13 @@ function BrokenEggsData() {
           
           </tr>  
           </thead>
-        <tr>
-          <td key={Data._id}>
-                    <Moment to={Data.createdAt}></Moment>
+      {
+        BrokenData ? 
+        BrokenData.map(Data=>(
+          <>
+        <tr key={Data._id} >
   
-                    </td>
+                    
                  
                    {
                    Object.values(Data.Data).map(vals=>{

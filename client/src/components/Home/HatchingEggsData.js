@@ -2,7 +2,6 @@ import React , {useEffect} from 'react';
 import { useParams} from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { AppActions, GetHatching } from '../../store/AppStore';
-import Moment from "react-moment";
 
 
 
@@ -27,14 +26,9 @@ function HatchingEggsData() {
    
     <table className="table table-striped table-bordered">  
     
-      {
-        HatchingData ? 
-        HatchingData.map(Data=>(
-          <>
                                 <thead class="thead-dark"> 
 
           <tr>  
-              <th>Created At</th>  
               <th>farm</th> 
               <th>line</th>
                        <th>house </th>
@@ -56,13 +50,14 @@ function HatchingEggsData() {
           
           </tr>  
           </thead>
+      {
+        HatchingData ? 
+        HatchingData.map(Data=>(
+          <>
           <tbody className='text-dark-50'>
 
-        <tr>
-          <td key={Data._id}>
-                    <Moment to={Data.createdAt}></Moment>
-  
-                    </td>
+        <tr key={Data._id} >
+          
                  
                    {
                    Object.values(Data.Data).map(vals=>{

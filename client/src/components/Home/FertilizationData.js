@@ -2,7 +2,6 @@ import React, {useEffect} from 'react';
 import { useParams} from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { AppActions, GetFert } from '../../store/AppStore';
-import Moment from "react-moment";
 
 
 
@@ -25,14 +24,9 @@ function FertilizationData() {
    
     <table className="table table-striped table-bordered">  
     
-      {
-        FertData ? 
-        FertData.map(Data=>(
-          <>
                                 <thead class="thead-dark"> 
 
           <tr>  
-              <th>Created At</th>  
               <th> production_date</th> 
               <th>batch_number</th>
                        <th>setting_date </th>
@@ -57,11 +51,12 @@ function FertilizationData() {
              
           
           </tr>  </thead>
-        <tr>
-          <td key={Data._id}>
-                    <Moment to={Data.createdAt}></Moment>
-  
-                    </td>
+      {
+        FertData ? 
+        FertData.map(Data=>(
+          <>
+        <tr key={Data._id}>
+                    
                  
                    {
                    Object.values(Data.Data).map(vals=>{
