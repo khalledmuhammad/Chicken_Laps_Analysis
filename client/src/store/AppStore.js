@@ -151,7 +151,7 @@ export const GetBroken=(Uid,Mid)=>{
        dispatch(AppActions.setBrokenData(Data))
      
      } catch (error) {
-       toast.error(error.message);
+       toast.error("لا يوجد بيانات");
 
      }
   }
@@ -170,7 +170,7 @@ export const GetFert=(Uid,Mid)=>{
 
      
      } catch (error) {
-       toast.error(error.message);
+      toast.error("لا يوجد بيانات");
 
      }
   }
@@ -189,7 +189,7 @@ export const GetEggData=(Uid,Mid)=>{
      dispatch(AppActions.setEggData(Data))
      
      } catch (error) {
-       toast.error(error.message);
+      toast.error("لا يوجد بيانات");
 
      }
   }
@@ -208,7 +208,7 @@ export const GetHatching=(Uid,Mid)=>{
      dispatch(AppActions.setHatchingData(Data))
      
      } catch (error) {
-       toast.error(error.message);
+      toast.error("لا يوجد بيانات");
 
      }
   }

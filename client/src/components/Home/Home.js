@@ -1,4 +1,4 @@
-import React , {useEffect} from "react";
+import React  from "react";
 import CompanyItem from "./CompanyItem";
 import { Link as RouterLink } from 'react-router-dom';
 import styled from "styled-components";

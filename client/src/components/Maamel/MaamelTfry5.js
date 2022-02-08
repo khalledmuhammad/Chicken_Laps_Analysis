@@ -2,7 +2,7 @@ import { Button } from "@mui/material";
 import React from "react";
 import styled from "styled-components";
 import { Link as RouterLink } from "react-router-dom";
-import { useSelector , useDispatch } from "react-redux";
+import { useSelector  } from "react-redux";
 
 
 const Container = styled.div`

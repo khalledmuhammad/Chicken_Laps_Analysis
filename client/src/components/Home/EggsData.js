@@ -18,7 +18,7 @@ const params = useParams()
         dispatch(AppActions.EmptyEggData())
        }
 
-    } , [dispatch]);
+    } , [dispatch , Cid , Lid]);
     const EggData= useSelector(state=> state.App.EggData)
 
   return (

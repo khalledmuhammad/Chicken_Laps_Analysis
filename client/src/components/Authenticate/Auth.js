@@ -2,7 +2,7 @@ import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import {useDispatch} from "react-redux"
-import {  GetLabs, LoginUser } from '../../store/userStore';
+import {   LoginUser } from '../../store/userStore';
 import {  useHistory  } from 'react-router-dom'
 
 import { TextField, Button, Grid } from '@material-ui/core';

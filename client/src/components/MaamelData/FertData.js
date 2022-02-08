@@ -3,7 +3,7 @@ import { useParams} from "react-router-dom";
 import { useFormik } from "formik";
 import {  FertValues , Validation } from "./FertDataValidation";
 import { TextField, Button, Grid } from "@mui/material";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import {  useHistory  } from 'react-router-dom'
 import { SaveFert } from '../../store/AppStore';
 

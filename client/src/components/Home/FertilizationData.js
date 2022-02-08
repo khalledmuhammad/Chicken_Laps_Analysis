@@ -18,7 +18,7 @@ function FertilizationData() {
          return ()=>{
             dispatch(AppActions.EmptyFert())
            }
-       } , [dispatch]);
+       } , [dispatch, Cid , Lid]);
        const FertData= useSelector(state=> state.App.FertData)
 
   return  (

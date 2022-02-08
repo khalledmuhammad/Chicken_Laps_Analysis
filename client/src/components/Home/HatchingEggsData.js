@@ -19,7 +19,7 @@ function HatchingEggsData() {
          return ()=>{
             dispatch(AppActions.EmptyHatching())
            }
-       } , [dispatch]);
+       } , [dispatch , Cid , Lid]);
        
        const HatchingData= useSelector(state=> state.App.HatchingData)
 

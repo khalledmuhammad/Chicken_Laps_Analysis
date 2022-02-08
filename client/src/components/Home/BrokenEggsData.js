@@ -18,7 +18,7 @@ function BrokenEggsData() {
       return ()=>{
         dispatch(AppActions.EmptyBroken())
        }
-    }  , [dispatch] );
+    }  , [dispatch, Cid , Lid ] );
 
     const BrokenData= useSelector(state=> state.App.BrokenData)
   return (

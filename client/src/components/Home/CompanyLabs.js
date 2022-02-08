@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import { Link as RouterLink } from 'react-router-dom';
 import { Button } from "@mui/material";
-import { useDispatch, useSelector } from "react-redux";
+import {  useSelector } from "react-redux";
 import { useParams} from "react-router-dom";
 
 
@@ -61,7 +61,6 @@ const Title = styled.h1`
 
 
 function CompanyLabs() {
-  const dispatch = useDispatch()
   const labs = useSelector(state=>state.Users.labs)
   const params = useParams()
   const Cid = params.Cid

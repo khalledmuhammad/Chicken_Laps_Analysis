@@ -134,7 +134,7 @@ export const AddNewCompany=(values)=>{
            username : values.username,
            password : values.password,
          },
-         getAuthedToken
+         getAuthedTokenChicken()
        );
      const company = request.data; 
      if(company.message){

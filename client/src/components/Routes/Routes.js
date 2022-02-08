@@ -41,7 +41,7 @@ function Routes() {
     { userRole==="admin" ? 
     <>
         <Route exact path="/" component={Home} /> 
-     <Route  path="/Add-Company" component={AddCompany} />
+     <Route   path="/Add-Company" component={AddCompany} />
      <Route path="/:Cid/:Lid/hatchingData" component={HatchingEggsData} />
      <Route path="/:Cid/:Lid/fertData" component={FertilizationData} />
      <Route path="/:Cid/:Lid/eggsData" component={EggsData} />

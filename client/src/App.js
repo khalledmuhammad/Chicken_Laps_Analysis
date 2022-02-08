@@ -7,7 +7,7 @@ import {
   getAllUsers,
   GetLabs,
   isAuthedUser,
-  UserActions,
+
 } from "./store/userStore";
 import CircularProgress from "@mui/material/CircularProgress";
 import "react-toastify/dist/ReactToastify.css";
