@@ -1,12 +1,12 @@
 import React  from "react";
 import CompanyItem from "./CompanyItem";
-import { Link as RouterLink } from 'react-router-dom';
-import styled from "styled-components";
+/* import { Link as RouterLink } from 'react-router-dom';
+ */import styled from "styled-components";
 import { useSelector  } from "react-redux";
-import { Button } from "@mui/material";
+/* import { Button } from "@mui/material"; */
 
 const Container = styled.div`
-  height: 50vh;
+  height: 70vh;
   width: 100%;
   padding: 30px;
 
@@ -31,7 +31,7 @@ function Home() {
       {Companies &&
         Companies.map((item) => <CompanyItem key={item.id} item={item}  />)
         }
-        <Button variant="contained" component={RouterLink} to={`/Add-Company`} >اضافة شركة</Button>
+       {/*  <Button variant="contained" component={RouterLink} to={`/Add-Company`} >اضافة شركة</Button> */}
     </Container>
   );
 }

@@ -16,7 +16,7 @@ function Header() {
     <>
       <Navbar collapseOnSelect expand="lg" bg="#b060d9" className="navbar">
         <div className="leftNav">
-          <h1> CHICKEN ANALYSIS </h1>
+          <h1> POULTRY ANALYSIS </h1>
         </div>
           <div className="middle">
             {loggedIn ? (
