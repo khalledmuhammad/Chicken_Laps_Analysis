@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import { useParams} from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { AppActions, GetFert } from '../../store/AppStore';
-import { read, utils, writeFileXLSX } from 'xlsx';
+import {  utils, writeFileXLSX } from 'xlsx';
 
 
 
@@ -20,11 +20,19 @@ function FertilizationData() {
            }
        } , [dispatch, Cid , Lid]);
        const FertData= useSelector(state=> state.App.FertData)
+       
        const HandleExport=()=>{
         const data = FertData.map(Data=>Object.values(Data.Data).map(vals=>{
           return(vals) })  )
+          const newData = data.map(vals=>{
+            for(let i = 0 ; i <vals.length ; i ++){
+              return vals[i]
+            }
+            return null
+
+          })
     
-          console.log(Object.entries(data))
+          console.log(newData)
          const wb = utils.book_new()
          
           const ws = utils.json_to_sheet(Object.values(data[0]))

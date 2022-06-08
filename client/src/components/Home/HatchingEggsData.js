@@ -2,7 +2,7 @@ import React , {useEffect} from 'react';
 import { useParams} from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { AppActions, GetHatching } from '../../store/AppStore';
-import { read, utils, writeFileXLSX } from 'xlsx';
+import {  utils, writeFileXLSX } from 'xlsx';
 
 
 
@@ -26,8 +26,15 @@ function HatchingEggsData() {
        const HandleExport=()=>{
         const data = HatchingData.map(Data=>Object.values(Data.Data).map(vals=>{
           return(vals) })  )
+          const newData = data.map(vals=>{
+            for(let i = 0 ; i <=vals.lenght ; i ++){
+              return vals[i]
+            }
+            return null
+
+          })
     
-          console.log(Object.entries(data))
+          console.log(newData)
          const wb = utils.book_new()
          
           const ws = utils.json_to_sheet(Object.values(data[0]))

@@ -3,7 +3,7 @@ import React , {useEffect} from 'react';
 import { useParams} from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { AppActions, GetBroken } from '../../store/AppStore';
-import { read, utils, writeFileXLSX } from 'xlsx';
+import {  utils, writeFileXLSX } from 'xlsx';
 
 
 
@@ -24,11 +24,16 @@ function BrokenEggsData() {
     const HandleExport=()=>{
       const data = BrokenData.map(Data=>Object.values(Data.Data).map(vals=>{
         return(vals) })  )
+        const newData = data.map(vals=>{
+          for(let i = 0 ; i <vals.length ; i ++){
+            return vals[i]
+          }
+          return null
+        })
   
-        console.log(Object.entries(data))
        const wb = utils.book_new()
        
-        const ws = utils.json_to_sheet(Object.values(data[0]))
+        const ws = utils.json_to_sheet(newData)
       
 
         
