@@ -35,7 +35,7 @@ function FertilizationData() {
           console.log(newData)
          const wb = utils.book_new()
          
-          const ws = utils.json_to_sheet(Object.values(data[0]))
+          const ws = utils.json_to_sheet(newData)
         
   
           
