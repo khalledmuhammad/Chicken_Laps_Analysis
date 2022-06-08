@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import { useParams} from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { AppActions, GetFert } from '../../store/AppStore';
+import { read, utils, writeFileXLSX } from 'xlsx';
 
 
 
@@ -19,6 +20,22 @@ function FertilizationData() {
            }
        } , [dispatch, Cid , Lid]);
        const FertData= useSelector(state=> state.App.FertData)
+       const HandleExport=()=>{
+        const data = FertData.map(Data=>Object.values(Data.Data).map(vals=>{
+          return(vals) })  )
+    
+          console.log(Object.entries(data))
+         const wb = utils.book_new()
+         
+          const ws = utils.json_to_sheet(Object.values(data[0]))
+        
+  
+          
+        
+          utils.book_append_sheet(wb , ws  , "myData")
+          writeFileXLSX(wb , "myExcel.xlsx") 
+        
+      }
 
   return  (
    
@@ -97,6 +114,8 @@ function FertilizationData() {
                     </>
         )) : null
       }
+      <button className='btn btn-primary' onClick={HandleExport}>export Data </button>
+
 
     
       </table>  

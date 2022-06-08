@@ -3,6 +3,7 @@ import React , {useEffect} from 'react';
 import { useParams} from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { AppActions, GetBroken } from '../../store/AppStore';
+import { read, utils, writeFileXLSX } from 'xlsx';
 
 
 
@@ -20,6 +21,22 @@ function BrokenEggsData() {
     }  , [dispatch, Cid , Lid ] );
 
     const BrokenData= useSelector(state=> state.App.BrokenData)
+    const HandleExport=()=>{
+      const data = BrokenData.map(Data=>Object.values(Data.Data).map(vals=>{
+        return(vals) })  )
+  
+        console.log(Object.entries(data))
+       const wb = utils.book_new()
+       
+        const ws = utils.json_to_sheet(Object.values(data[0]))
+      
+
+        
+      
+        utils.book_append_sheet(wb , ws  , "myData")
+        writeFileXLSX(wb , "myExcel.xlsx") 
+      
+    }
   return (
    
     <table className="table table-striped table-bordered">  
@@ -108,7 +125,7 @@ function BrokenEggsData() {
                     </>
         )) : null
       }
-
+<button className='btn btn-primary' onClick={HandleExport}>export Data </button>
     
       </table>  
 

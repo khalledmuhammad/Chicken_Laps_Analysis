@@ -2,6 +2,8 @@ import React , {useEffect} from 'react';
 import { useParams} from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { AppActions, GetEggData } from '../../store/AppStore';
+import { read, utils, writeFileXLSX } from 'xlsx';
+
 
 
 function EggsData() {
@@ -19,6 +21,22 @@ const params = useParams()
 
     } , [dispatch , Cid , Lid]);
     const EggData= useSelector(state=> state.App.EggData)
+    const HandleExport=()=>{
+      const data = EggData.map(Data=>Object.values(Data.Data).map(vals=>{
+        return(vals) })  )
+  
+        console.log(Object.entries(data))
+       const wb = utils.book_new()
+       
+        const ws = utils.json_to_sheet(Object.values(data[0]))
+      
+
+        
+      
+        utils.book_append_sheet(wb , ws  , "myData")
+        writeFileXLSX(wb , "myExcel.xlsx") 
+      
+    }
 
   return (
    
@@ -90,6 +108,7 @@ const params = useParams()
                     </>
         )) : null
       }
+<button className='btn btn-primary' onClick={HandleExport}>export Data </button>
 
     
       </table>  

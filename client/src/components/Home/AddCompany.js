@@ -5,6 +5,7 @@ import { useHistory } from "react-router";
 import { toast } from "react-toastify";
 import { AddNewCompany } from "../../store/userStore";
 
+
 function AddCompany() {
   const dispatch = useDispatch();
   const history = useHistory();
