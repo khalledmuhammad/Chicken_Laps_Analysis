@@ -27,7 +27,7 @@ function Home() {
   return (
     
     <Container>
-
+     
       {Companies &&
         Companies.map((item) => <CompanyItem key={item.id} item={item}  />)
         }

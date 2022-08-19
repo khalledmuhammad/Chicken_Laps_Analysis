@@ -12,8 +12,16 @@ import {
 import CircularProgress from "@mui/material/CircularProgress";
 import "react-toastify/dist/ReactToastify.css";
 import Routes from "./components/Routes/Routes";
+import AOS from "aos";
+
+// ..
+AOS.init({
+  duration: 1000,
+});
+
 
 function App() {
+
   const dispatch = useDispatch();
   const isLoggedin = useSelector((state) => state.App.loggedIn);
   const isAdmin = useSelector((state) => state.Users.user.role);

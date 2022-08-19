@@ -43,7 +43,7 @@ const Info = styled.div`
   box-shadow: 7px 6px 18px -1px rgba(0, 0, 0, 0.55);
   img {
   
-    background-size: contain;
+    object-fit: fill;
     width : 100%;
     height : 100%;
 
@@ -59,7 +59,7 @@ const Title = styled.h1`
 
 function CompanyItem({ item }) {
   return (
-    <Container>
+    <Container  data-aos="fade-out" >
       <Info>
         <Title> {item.username} </Title>
        <img src={CairoA} alt="cairo3A poultary" /> 

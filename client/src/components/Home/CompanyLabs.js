@@ -70,7 +70,7 @@ function CompanyLabs() {
   return( 
     <Container>
    {labs.map(labs=>(
-    <LabItem>
+    <LabItem data-aos="fade-out"  >
     <Info>
       <Title> {labs.Labname} </Title>
       <Button variant="contained"  style={{color:"white"}} component={RouterLink} to={`/${Cid}/${labs._id}`}   >اظهر بيانات المعمل</Button>

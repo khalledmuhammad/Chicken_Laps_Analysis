@@ -3,8 +3,7 @@ const { Schema } = mongoose;
 
 const labsSchema = mongoose.Schema(
   {
-    
-
+  
     Data: {
         EggData: {
             type: Schema.Types.ObjectId,

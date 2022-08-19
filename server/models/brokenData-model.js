@@ -3,6 +3,7 @@ const { Schema } = mongoose;
 
 const BrokenEggSchema = mongoose.Schema(
   {
+   
     user: {
       type: Schema.Types.ObjectId,
       ref: "User",
@@ -11,10 +12,15 @@ const BrokenEggSchema = mongoose.Schema(
     Labs :{
       type: Schema.Types.ObjectId,
       ref: "Labs" 
-    }
-   
+    }, 
+
+
   },
-  { timestamps: true }
+  
+ 
+  { timestamps: true },
+
+
 );
 
 const BrokenEgg = mongoose.model("BrokenEgg", BrokenEggSchema);

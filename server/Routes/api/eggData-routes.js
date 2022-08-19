@@ -36,7 +36,7 @@ router
       const mid = req.params.Mid;
       const eggData = await EggData.find({ user: req.params.Uid })
         .where({Labs : mid})
-        .populate("user", "username role");
+        .populate("user", "username role"); //mongoose remove the capital U from user so mtfkr4 lyh hna user m4 User 3ady m4 m4kla
 
       if (!eggData || eggData.length === 0)
         return res.status(400).json("eggData not found");
